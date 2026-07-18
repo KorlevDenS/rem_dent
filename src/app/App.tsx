@@ -1,21 +1,22 @@
-import { Button, Typography, Box, useTheme, useMediaQuery } from "@mui/material";
+import { Box } from "@mui/material";
+import TopBar from "../navigation/TopBar.tsx";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {PAGES} from "../navigation/pages.ts";
 
 function App() {
 
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
-  //const isDesktop = useMediaQuery(theme.breakpoints.up("lg"));
-
-
-  return (
-      <Box >
-        <Typography variant="h2">Приложение работает</Typography>
-        <Button variant="contained">Кнопка</Button>
-        { isMobile &&
-            <Button variant="contained">Кнопка для телефона</Button>
-        }
-      </Box>
-  )
+    return (
+        <BrowserRouter>
+            <Box>
+                <TopBar/>
+                <Routes>
+                    {PAGES.map(page => (
+                        <Route key={page.path} path={page.path} element={<page.component/>} />
+                    ))}
+                </Routes>
+            </Box>
+        </BrowserRouter>
+    );
 }
 
 export default App
