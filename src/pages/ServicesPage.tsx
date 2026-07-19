@@ -68,7 +68,7 @@ export function ServicesPage() {
                         cost={"500₽"}
                         imgLeft={false}
                         imgWidth={300}
-                        img={"/images/glavnaya.png"}
+                        img={"/images/check_up.png"}
                         themeColor={"secondary.main"}
                     />
                     <ServiceCard
@@ -79,18 +79,18 @@ export function ServicesPage() {
                         cost={"от 30 000₽ до 50 000₽"}
                         imgLeft={true}
                         imgWidth={300}
-                        img={"/images/glavnaya.png"}
+                        img={"/images/plate_denture.png"}
                         themeColor={"primary.main"}
                     />
                     <ServiceCard
-                        title={"Бюгельные съёмные протез"}
+                        title={"Бюгельные съёмные протезы"}
                         description={"В основе имеют ажурный металлический прочный каркас, изготовленный методом " +
                             "литья с последующей установкой зубов \"Primodent\". Достоинства: равномерное " +
                             "распределение нагрузки на опорные зубы, долговечность."}
                         cost={"от 50 000₽ до 70 000₽"}
                         imgLeft={false}
                         imgWidth={300}
-                        img={"/images/glavnaya.png"}
+                        img={"/images/removable_clasp_dentures.jpg"}
                         themeColor={"secondary.main"}
                     />
                     <ServiceCard
@@ -102,7 +102,7 @@ export function ServicesPage() {
                         cost={"15 000₽"}
                         imgLeft={true}
                         imgWidth={300}
-                        img={"/images/glavnaya.png"}
+                        img={"/images/metal_ceramic_crowns.png"}
                         themeColor={"primary.main"}
                     />
                     <ServiceCard
@@ -113,7 +113,7 @@ export function ServicesPage() {
                         cost={"25 000₽"}
                         imgLeft={false}
                         imgWidth={300}
-                        img={"/images/glavnaya.png"}
+                        img={"/images/zirconium.png"}
                         themeColor={"secondary.main"}
                     />
                     <ServiceCard
