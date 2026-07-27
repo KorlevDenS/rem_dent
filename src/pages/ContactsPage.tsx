@@ -1,4 +1,4 @@
-import {Box, Container, Divider, Stack, Typography} from "@mui/material";
+import {Box, Container, Divider, Stack, Typography, useMediaQuery, useTheme} from "@mui/material";
 import {BottomInfo} from "./common/BottomInfo.tsx";
 import PhoneIcon from '@mui/icons-material/Phone';
 import ChatIcon from '@mui/icons-material/Chat';
@@ -6,7 +6,6 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import IconButton from "@mui/material/IconButton";
 import LocationPinIcon from '@mui/icons-material/LocationPin';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import {theme} from "../theme";
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 
 function ClinicMap() {
@@ -35,10 +34,51 @@ function ClinicMap() {
     );
 }
 
+const TelegramChatButton = ({ username = "your_username" }) => {
+    const openTelegram = () => {
+        const appLink = `tg://resolve?domain=${username}`;
+        const webLink = `https://t.me/${username}`;
+
+        // Пытаемся открыть приложение Telegram
+        window.location.href = appLink;
+
+        // Если приложение не установлено — откроется веб-версия
+        setTimeout(() => {
+            window.open(webLink, "_blank");
+        }, 300);
+    };
+
+    return (
+        <IconButton
+            onClick={openTelegram}
+            sx={{
+                mx: 2,
+                width: 50,
+                height: 50,
+                borderRadius: "50%",
+                backgroundColor: "primary.main",
+                color: "background.paper",
+                "&:hover": {
+                    backgroundColor: "primary.dark",
+                },
+            }}
+        >
+            <TelegramIcon sx={{ fontSize: 32 }} />
+        </IconButton>
+    );
+};
+
 export function ContactsPage() {
+
+    const theme = useTheme();
+    const isXs = useMediaQuery(theme.breakpoints.down("sm"));
+
     return (
         <Stack spacing={0}>
-            <Box sx={{ pt: 14, pb: 7 }}>
+            <Box sx={{
+                pt: { xs: 7, md: 10, lg: 12, xl: 14 },
+                pb: { xs: 3.7, md: 5.5, lg: 6.5, xl: 8 }
+            }}>
                 <Container maxWidth={false} sx={{ maxWidth: { xs: '95%', md: '92%', lg: '87%', xl: '75%' } }}>
                     <Typography variant="h2" sx={{
                         color: "primary.main",
@@ -52,24 +92,43 @@ export function ContactsPage() {
                         }}}>
                         Чтобы записаться
                     </Typography>
-                    <Typography variant="body2" sx={{ maxWidth: "600px", mt: 3  }}>
+                    <Typography variant="body2" sx={{ maxWidth: "600px", mt: 3.7  }}>
                         свяжитесь с нами удобным вам способом и приходите на приём
                     </Typography>
                 </Container>
             </Box>
             <Box sx={{ pb: 11,
                 backgroundColor: "secondary.main",
-                background: `linear-gradient(to bottom, ${theme.palette.background.default} 0%, ${theme.palette.background.default} 17%, ${theme.palette.primary.main} 17%, ${theme.palette.primary.main} 100%)`,
+                background: {
+                    xs: `linear-gradient(to bottom, ${theme.palette.background.default} 0%, ${theme.palette.background.default} 11%, ${theme.palette.primary.main} 11%, ${theme.palette.primary.main} 100%)`,
+                    sm: `linear-gradient(to bottom, ${theme.palette.background.default} 0%, ${theme.palette.background.default} 17%, ${theme.palette.primary.main} 17%, ${theme.palette.primary.main} 100%)`
+                },
                 borderRadius: 0, color: "background.paper" }}>
                 <Container  maxWidth={false} sx={{ maxWidth: { xs: '95%', md: '92%', lg: '87%', xl: '75%' } }}>
                     <Stack>
-                        <Box sx={{ display: "flex",alignItems: "stretch", flexDirection: "row"}}>
-                            <Box sx={{mr: 2, py: 4,
+                        <Box sx={{
+                            display: "grid",
+                            gridTemplateColumns: { xs: "1fr", sm: "1fr 1fr" },
+                        }}>
+                            <Box sx={{
+                                width: "100%",
+                                mr: {xs: "auto", sm: 2},
+                                ml: {xs: "auto", sm: 0},
+                                mb: {xs: 4.5, sm: 0},
+                                py: 4,
+                                px: 4,
                                 backgroundColor: "secondary.main",
-                                display: "flex", flexGrow: 1, justifyContent: "center", borderRadius: 7}}>
+                                boxShadow: theme.shadows[10],
+                                display: "flex",
+                                justifyContent: "center",
+                                borderRadius: {xs: 5, sm: 5.5, md: 6, lg: 7, xl: 7}}}
+                            >
                                 <Stack spacing={2}>
                                     <Box sx={{ display: "flex"}}>
-                                        <PhoneIcon sx={{ flexGrow: 1, fontSize: 70}}/>
+                                        <PhoneIcon sx={{
+                                            flexGrow: 1,
+                                            fontSize: {xs: 55, sm: 60, md: 65, lg: 70, xl: 70}
+                                        }}/>
                                     </Box>
                                     <Typography sx={{pb: 1, textAlign: "center"}} variant="h4" >
                                         Звоните по телефону
@@ -79,30 +138,30 @@ export function ContactsPage() {
                                     </Typography>
                                 </Stack>
                             </Box>
-                            <Box sx={{ml: 2, py: 4, backgroundColor: "secondary.main", display: "flex", flexGrow: 1, justifyContent: "center", borderRadius: 7}}>
+                            <Box sx={{
+                                width: "100%",
+                                mr: {xs: "auto", sm: 0},
+                                ml: {xs: "auto", sm: 2},
+                                py: 4,
+                                px: 4,
+                                backgroundColor: "secondary.main",
+                                display: "flex",
+                                justifyContent: "center",
+                                borderRadius: {xs: 5, sm: 5.5, md: 6, lg: 7, xl: 7},
+                                boxShadow: theme.shadows[10]
+                            }}>
                                 <Stack spacing={2}>
                                     <Box sx={{ display: "flex"}}>
-                                        <ChatIcon sx={{ flexGrow: 1, fontSize: 70}}/>
+                                        <ChatIcon sx={{
+                                            flexGrow: 1,
+                                            fontSize: {xs: 55, sm: 60, md: 65, lg: 70, xl: 70}
+                                        }}/>
                                     </Box>
                                     <Typography sx={{pb: 1, textAlign: "center"}} variant="h4" >
                                         Или пишите в месседжер
                                     </Typography>
                                     <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row",}}>
-                                        <IconButton
-                                            sx={{
-                                                mx: 2,
-                                                width: 50,
-                                                height: 50,
-                                                borderRadius: "50%",
-                                                backgroundColor: "primary.main",
-                                                color: "background.paper",
-                                                "&:hover": {
-                                                    backgroundColor: "primary.dark",
-                                                },
-                                            }}
-                                        >
-                                            <TelegramIcon sx={{ fontSize: 32 }} />
-                                        </IconButton>
+                                        <TelegramChatButton username={"DenISsim0"}/>
                                         <IconButton
                                             sx={{
                                                 mx: 2,
@@ -123,12 +182,24 @@ export function ContactsPage() {
                             </Box>
                         </Box>
                         <Box sx={{mt: 7, mb: 3.5, display: "flex", flexGrow: 1, justifyContent: "center", alignItems: "center"}}>
-                            <AccessTimeIcon sx={{mr: 2, fontSize: 70}}/>
+                            {!isXs &&
+                                <AccessTimeIcon sx={{
+                                    mr: 2,
+                                    fontSize: {xs: 55, sm: 60, md: 65, lg: 70, xl: 70}
+                                }}/>
+                            }
                             <Stack spacing={1.5} sx={{flexGrow: 1, }}>
-                                <Typography variant="h4" align={"center"} sx={{mt: 0, textDecoration: "underline",}}>
-                                    График работы:
-                                </Typography>
-
+                                <Box sx={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+                                    {isXs &&
+                                        <AccessTimeIcon sx={{
+                                            mr: 2,
+                                            fontSize: {xs: 55, sm: 60, md: 65, lg: 70, xl: 70}
+                                        }}/>
+                                    }
+                                    <Typography variant="h4" align={"center"} sx={{mt: 0, textDecoration: "underline",}}>
+                                        График работы
+                                    </Typography>
+                                </Box>
                                 <Typography variant="h4" align={"center"} sx={{mt: 0}}>
                                     ежедневно, только по предварительной записи
                                 </Typography>
@@ -136,13 +207,27 @@ export function ContactsPage() {
                         </Box>
                         <Divider/>
                         <Box sx={{mt: 3.5, display: "flex", flexGrow: 1, justifyContent: "center", alignItems: "center"}}>
-                            <LocationPinIcon sx={{mr: 2, fontSize: 70}}/>
+                            {!isXs &&
+                                <LocationPinIcon sx={{
+                                    mr: 2,
+                                    fontSize: {xs: 55, sm: 60, md: 65, lg: 70, xl: 70}
+                                }}/>
+                            }
                             <Stack spacing={1.5} sx={{flexGrow: 1, }} >
-                                <Typography variant="h4" align={"center"} sx={{mt: 0, textDecoration: "underline",}}>
-                                    Адрес приёма:
-                                </Typography>
+                                <Box sx={{display: "flex", alignItems: "center", justifyContent: "center"}}>
+                                    {isXs &&
+                                        <LocationPinIcon sx={{
+                                            mr: 1,
+                                            fontSize: {xs: 55, sm: 60, md: 65, lg: 70, xl: 70}
+                                        }}/>
+                                    }
+                                    <Typography variant="h4" align={"center"} sx={{mt: 0, textDecoration: "underline",}}>
+                                        Адрес приёма
+                                    </Typography>
+                                </Box>
                                 <Typography variant="h4" align={"center"} sx={{mt: 0}}>
-                                    г. Раменское, ул. Северное шоссе, д. 10, офисный центр "Плаза Рамстарс", 1-й этаж
+                                    г. Раменское, ул. Северное шоссе, д. 10, офисный центр "Плаза Рамстарс", 1-й этаж,
+                                    ООО "Улыбка"
                                 </Typography>
                             </Stack>
                         </Box>

@@ -21,5 +21,9 @@ export default {
         fontFamily: "'Inter', sans-serif",
     },
 
-
+    body3: {
+        fontSize: "1.6rem",
+        lineHeight: 1.8,
+        fontFamily: "'Inter', sans-serif",
+    },
 };

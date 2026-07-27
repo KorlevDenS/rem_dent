@@ -1,18 +1,17 @@
 import {MainPage} from "../pages/MainPage.tsx";
 import * as React from "react";
 import {ContactsPage} from "../pages/ContactsPage.tsx";
-import {DentistPage} from "../pages/DentistPage.tsx";
+// import {DentistPage} from "../pages/DentistPage.tsx";
 import {ServicesPage} from "../pages/ServicesPage.tsx";
 import InfoIcon from '@mui/icons-material/Info';
 import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
-import PersonIcon from '@mui/icons-material/Person';
+// import PersonIcon from '@mui/icons-material/Person';
 import CurrencyRubleIcon from '@mui/icons-material/CurrencyRuble';
 import type {SvgIconComponent} from "@mui/icons-material";
 import {LegalInfoPage} from "../pages/LegalInfo.tsx";
 import PolicyIcon from '@mui/icons-material/Policy';
 
 export const TITLE: string = "Korolev dent";
-export const TITLE_MOBILE: string = "K";
 
 export interface PageConfig {
     path: string;
@@ -38,13 +37,13 @@ export const PAGES: PageConfig[] = [
         additional: false,
         icon: CurrencyRubleIcon
     },
-    {
-        path: "/dentist",
-        label: "ВРАЧ",
-        component: DentistPage,
-        additional: false,
-        icon: PersonIcon
-    },
+    // {
+    //     path: "/dentist",
+    //     label: "О СЕБЕ",
+    //     component: DentistPage,
+    //     additional: false,
+    //     icon: PersonIcon
+    // },
     {
         path: "/contacts",
         label: "КОНТАКТЫ",
