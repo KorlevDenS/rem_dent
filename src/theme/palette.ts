@@ -1,5 +1,7 @@
+import type {PaletteMode} from "@mui/material";
+
 export default {
-    mode: "light",
+    mode: "light" as PaletteMode,
 
     primary: {
         main: "#432d16",
