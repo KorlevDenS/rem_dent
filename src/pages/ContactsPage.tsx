@@ -7,6 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import LocationPinIcon from '@mui/icons-material/LocationPin';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
+import {SEO} from "./common/SEO.tsx";
 
 function ClinicMap() {
     return (
@@ -75,6 +76,13 @@ export function ContactsPage() {
 
     return (
         <Stack spacing={0}>
+
+            <SEO
+                title="Контакты стоматолога‑ортопеда в Раменском — запись на приём"
+                description="Запись на приём к стоматологу‑ортопеду Владимиру Королёву в Раменском. Телефон
+                +7 (925) 195‑43‑43, мессенджер, график работы и адрес клиники на Северном шоссе, 10."
+            />
+
             <Box sx={{
                 pt: { xs: 7, md: 10, lg: 12, xl: 14 },
                 pb: { xs: 3.7, md: 5.5, lg: 6.5, xl: 8 }
@@ -162,21 +170,6 @@ export function ContactsPage() {
                                     </Typography>
                                     <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row",}}>
                                         <TelegramChatButton username={"DenISsim0"}/>
-                                        <IconButton
-                                            sx={{
-                                                mx: 2,
-                                                width: 50,
-                                                height: 50,
-                                                borderRadius: "50%",
-                                                backgroundColor: "primary.main",
-                                                color: "background.paper",
-                                                "&:hover": {
-                                                    backgroundColor: "primary.dark",
-                                                },
-                                            }}
-                                        >
-                                            <TelegramIcon sx={{ fontSize: 32 }} />
-                                        </IconButton>
                                     </Box>
                                 </Stack>
                             </Box>

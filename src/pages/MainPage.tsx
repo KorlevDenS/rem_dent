@@ -1,6 +1,7 @@
 import {Box, Container, Typography, Stack, ImageList, ImageListItem, useTheme, useMediaQuery} from "@mui/material";
 import {BottomInfo} from "./common/BottomInfo.tsx";
 import {theme} from "../theme";
+import {SEO} from "./common/SEO.tsx";
 
 const itemData = [
     {
@@ -97,6 +98,13 @@ function QuiltedImageList() {
 export function MainPage() {
     return (
         <Stack spacing={0}>
+
+            <SEO
+                title="Стоматологические конструкции в Раменском — Владимир Королёв"
+                description="Изготовление съёмных и несъёмных протезов, коронок и ортопедических конструкций в
+                Раменском. 30 лет опыта. Эстетика, комфорт и долговечность."
+            />
+
             <Box sx={{ py: { xs: 6, md: 8, lg: 10, xl: 10 } }}>
                 <Box sx={{ display: "flex", alignItems: "center", flexDirection: "row",}}>
                     <Container maxWidth={false} sx={{ maxWidth: { xs: '95%', md: '92%', lg: '87%', xl: '75%' } }}>
