@@ -131,7 +131,7 @@ export function ContactsPage() {
                                         }}/>
                                     </Box>
                                     <Typography sx={{pb: 1, textAlign: "center"}} variant="h4" >
-                                        Звоните по телефону
+                                        Звоните/пишите SMS по телефону
                                     </Typography>
                                     <Typography sx={{pb: 1, textAlign: "center"}} variant="h4" >
                                         +7 (925) 195-43-43
@@ -158,7 +158,7 @@ export function ContactsPage() {
                                         }}/>
                                     </Box>
                                     <Typography sx={{pb: 1, textAlign: "center"}} variant="h4" >
-                                        Или пишите в месседжер
+                                        Или пишите в мессенджер
                                     </Typography>
                                     <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "row",}}>
                                         <TelegramChatButton username={"DenISsim0"}/>
