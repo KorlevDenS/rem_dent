@@ -5,31 +5,31 @@ import {SEO} from "./common/SEO.tsx";
 
 const itemData = [
     {
-        img: 'public/images/zirconium.png',
+        img: '/images/zirconium.png',
         title: 'Five',
         rows: 4,
         cols: 2,
     },
     {
-        img: 'public/images/сrowns_on_implants.jpg',
+        img: '/images/сrowns_on_implants.jpg',
         title: 'Three',
         rows: 2,
         cols: 2,
     },
     {
-        img: 'public/images/metal_ceramic_crowns.png',
+        img: '/images/metal_ceramic_crowns.png',
         title: 'One',
         rows: 1,
         cols: 1,
     },
     {
-        img: 'public/images/removable_clasp_dentures.jpg',
+        img: '/images/removable_clasp_dentures.jpg',
         title: 'Four',
         rows: 2,
         cols: 1,
     },
     {
-        img: 'public/images/plate_denture.png',
+        img: '/images/plate_denture.png',
         title: 'Two',
         rows: 1,
         cols: 1,
