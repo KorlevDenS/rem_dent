@@ -136,7 +136,7 @@ export function ServicesPage() {
                         cost={"500₽"}
                         imgLeft={false}
                         imgWidth={300}
-                        img={"/images/check_up.png"}
+                        img={"/images/korolevdent-stomatologicheskaya-konsultaciya.png"}
                         themeColor={"secondary.main"}
                     />
                     <ServiceCard
@@ -147,7 +147,7 @@ export function ServicesPage() {
                         cost={"от 30 000₽ до 50 000₽"}
                         imgLeft={true}
                         imgWidth={300}
-                        img={"/images/plate_denture.png"}
+                        img={"/images/korolevdent-plastinochnye-semnyie-protezy.png"}
                         themeColor={"primary.main"}
                     />
                     <ServiceCard
@@ -158,7 +158,7 @@ export function ServicesPage() {
                         cost={"от 50 000₽ до 70 000₽"}
                         imgLeft={false}
                         imgWidth={300}
-                        img={"/images/removable_clasp_dentures.jpg"}
+                        img={"/images/korolevdent-bugelnyie-semnyie-protezy.jpg"}
                         themeColor={"secondary.main"}
                     />
                     <ServiceCard
@@ -170,7 +170,7 @@ export function ServicesPage() {
                         cost={"15 000₽"}
                         imgLeft={true}
                         imgWidth={300}
-                        img={"/images/metal_ceramic_crowns.png"}
+                        img={"/images/korolevdent-metallokeramicheskie-koronki.png"}
                         themeColor={"primary.main"}
                     />
                     <ServiceCard
@@ -181,7 +181,7 @@ export function ServicesPage() {
                         cost={"25 000₽"}
                         imgLeft={false}
                         imgWidth={300}
-                        img={"/images/zirconium.png"}
+                        img={"/images/korolevdent-cirkonievye-koronki.png"}
                         themeColor={"secondary.main"}
                     />
                     <ServiceCard
@@ -191,7 +191,7 @@ export function ServicesPage() {
                         cost={"30 000₽"}
                         imgLeft={true}
                         imgWidth={300}
-                        img={"/images/сrowns_on_implants.jpg"}
+                        img={"/images/korolevdent-koronki-na-implantah.jpg"}
                         themeColor={"primary.main"}
                     />
                 </Stack>

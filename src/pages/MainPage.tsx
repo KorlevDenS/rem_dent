@@ -5,32 +5,32 @@ import {SEO} from "./common/SEO.tsx";
 
 const itemData = [
     {
-        img: '/images/zirconium.png',
-        title: 'Five',
+        img: '/images/korolevdent-cirkonievye-koronki.png',
+        title: 'Циркониевые зубные коронки',
         rows: 4,
         cols: 2,
     },
     {
-        img: '/images/сrowns_on_implants.jpg',
-        title: 'Three',
+        img: '/images/korolevdent-koronki-na-implantah.jpg',
+        title: 'Зубные коронки на имплантах',
         rows: 2,
         cols: 2,
     },
     {
-        img: '/images/metal_ceramic_crowns.png',
-        title: 'One',
+        img: '/images/korolevdent-metallokeramicheskie-koronki.png',
+        title: 'Металлокерамические зубные коронки',
         rows: 1,
         cols: 1,
     },
     {
-        img: '/images/removable_clasp_dentures.jpg',
-        title: 'Four',
+        img: '/images/korolevdent-bugelnyie-semnyie-protezy.jpg',
+        title: 'Бюгельные съемные зубные протезы',
         rows: 2,
         cols: 1,
     },
     {
-        img: '/images/plate_denture.png',
-        title: 'Two',
+        img: '/images/korolevdent-plastinochnye-semnyie-protezy.png',
+        title: 'Пластиночные съемные зубные протезы',
         rows: 1,
         cols: 1,
     },
@@ -144,7 +144,7 @@ export function MainPage() {
                                     minHeight: { xs: 290, sm: 370, md: 370, lg: 420, xl: 470 },
                                     maxHeight: { xs: 290, sm: 370, md: 370, lg: 420, xl: 470 },
 
-                                    backgroundImage: "url(/images/main.jpg)",
+                                    backgroundImage: "url(/images/korolevdent-stomatolog-ortoped-vladimir-korolev.jpg)",
                                     backgroundSize: "100% 100%",     // картинка всегда ровно по размеру Box
                                     backgroundPosition: "center",
 
@@ -171,7 +171,8 @@ export function MainPage() {
                     <Container  maxWidth={false} sx={{ maxWidth: { xs: '95%', md: '92%', lg: '87%', xl: '75%' } }}>
                         <Box sx={{ display: "flex", flexDirection: {xs: "column-reverse", md: "row"},}}>
                             <Box
-                                component="img" src={"/images/smile.png"} alt={"smile"}
+                                component="img" src={"/images/korolevdent-siyayushchaya-ulybka-pacienta.png"}
+                                alt={"Красивая улыбка пациента"}
                                 sx={{
                                     mt: { xs: 6, md: 0},
                                     mr: {xs: "auto", md: 4},
