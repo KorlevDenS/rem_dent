@@ -1,6 +1,5 @@
 import {Box, Container, Divider, Stack, Typography, useMediaQuery, useTheme} from "@mui/material";
 import {BottomInfo} from "./common/BottomInfo.tsx";
-import {SEO} from "./common/SEO.tsx";
 
 type ServiceCardProps = {
     title: string;
@@ -107,7 +106,7 @@ function ServiceCard({title, description, cost, imgLeft, imgWidth, img, themeCol
     );
 }
 
-export function ServicesPage() {
+export function ServicesModule() {
 
     const theme = useTheme();
     const isXs = useMediaQuery(theme.breakpoints.down("sm"));
@@ -117,12 +116,6 @@ export function ServicesPage() {
     return (
 
         <Stack sx={{ mt: {xs: 4.5, sm: 6}, alignItems: "center" }} spacing={mainSpacing}>
-
-            <SEO
-                title="Стоматологические услуги в Раменском — протезы, коронки, консультации"
-                description="Съёмные и несъёмные протезы, бюгельные конструкции, металлокерамические и циркониевые
-                коронки, коронки на имплантах. Консультация стоматолога‑ортопеда в Раменском."
-            />
 
             <Container maxWidth={false} sx={{ maxWidth: { xs: '100%', md: '92%', lg: '87%', xl: '75%' } }}>
                 <Stack spacing={mainSpacing}>

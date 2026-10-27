@@ -1,14 +1,12 @@
-import {MainPage} from "../pages/MainPage.tsx";
+import {AboutModule} from "../pages/AboutModule.tsx";
 import * as React from "react";
-import {ContactsPage} from "../pages/ContactsPage.tsx";
-// import {DentistPage} from "../pages/DentistPage.tsx";
-import {ServicesPage} from "../pages/ServicesPage.tsx";
+import {ContactsModule} from "../pages/ContactsModule.tsx";
+import {ServicesModule} from "../pages/ServicesModule.tsx";
 import InfoIcon from '@mui/icons-material/Info';
 import PermPhoneMsgIcon from '@mui/icons-material/PermPhoneMsg';
-// import PersonIcon from '@mui/icons-material/Person';
 import CurrencyRubleIcon from '@mui/icons-material/CurrencyRuble';
 import type {SvgIconComponent} from "@mui/icons-material";
-import {LegalInfoPage} from "../pages/LegalInfo.tsx";
+import {LegalInfoModule} from "../pages/LegalInfoModule.tsx";
 import PolicyIcon from '@mui/icons-material/Policy';
 
 export const TITLE: string = "Korolev dent";
@@ -26,35 +24,28 @@ export const PAGES: PageConfig[] = [
     {
         path: "/",
         label: "ПАЦИЕНТАМ",
-        component: MainPage,
+        component: AboutModule,
         additional: false,
         icon: InfoIcon,
     },
     {
         path: "/services",
         label: "КОНСТРУКЦИИ И ЦЕНЫ",
-        component: ServicesPage,
+        component: ServicesModule,
         additional: false,
         icon: CurrencyRubleIcon
     },
-    // {
-    //     path: "/dentist",
-    //     label: "О СЕБЕ",
-    //     component: DentistPage,
-    //     additional: false,
-    //     icon: PersonIcon
-    // },
     {
         path: "/contacts",
         label: "КОНТАКТЫ",
-        component: ContactsPage,
+        component: ContactsModule,
         additional: true,
         icon: PermPhoneMsgIcon
     },
     {
         path: "/legal",
         label: "ПРАВОВАЯ ИНФОРМАЦИЯ",
-        component: LegalInfoPage,
+        component: LegalInfoModule,
         additional: true,
         icon: PolicyIcon
     },

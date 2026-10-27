@@ -1,7 +1,7 @@
 import {Box, Container, Typography, useMediaQuery, useTheme} from "@mui/material";
 import {PAGES} from "../../navigation/pages.ts";
 import Button from "@mui/material/Button";
-import {Link} from "react-router-dom";
+import {Link} from "react-router";
 
 export function BottomInfo() {
 

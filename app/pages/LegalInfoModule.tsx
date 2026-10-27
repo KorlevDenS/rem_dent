@@ -12,9 +12,8 @@ import {
 } from "@mui/material";
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import {SEO} from "./common/SEO.tsx";
 
-export function LegalInfoPage() {
+export function LegalInfoModule() {
 
     const theme = useTheme();
     const isXs = useMediaQuery(theme.breakpoints.down("sm"));
@@ -23,12 +22,6 @@ export function LegalInfoPage() {
 
     return (
         <Container maxWidth={false} sx={{ maxWidth: { xs: '95%', md: '92%', lg: '87%', xl: '75%' } }}>
-
-            <SEO
-                title="Информация для пациентов и сведения о стоматологе‑ортопеде — Раменское"
-                description="Юридическая информация для пациентов, возрастные ограничения, условия оказания услуг,
-                сведения о стоматологе‑ортопеде Владимире Королёве, образование и аккредитация. Раменское."
-            />
 
             <Stack spacing={mainSpacing} sx={{
                 my: {xs: 4.5, sm: 6}

@@ -7,7 +7,6 @@ import IconButton from "@mui/material/IconButton";
 import LocationPinIcon from '@mui/icons-material/LocationPin';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
-import {SEO} from "./common/SEO.tsx";
 
 function ClinicMap() {
     return (
@@ -69,20 +68,13 @@ const TelegramChatButton = ({ username = "your_username" }) => {
     );
 };
 
-export function ContactsPage() {
+export function ContactsModule() {
 
     const theme = useTheme();
     const isXs = useMediaQuery(theme.breakpoints.down("sm"));
 
     return (
         <Stack spacing={0}>
-
-            <SEO
-                title="Контакты стоматолога‑ортопеда в Раменском — запись на приём"
-                description="Запись на приём к стоматологу‑ортопеду Владимиру Королёву в Раменском. Телефон
-                +7 (925) 195‑43‑43, мессенджер, график работы и адрес клиники на Северном шоссе, 10."
-            />
-
             <Box sx={{
                 pt: { xs: 7, md: 10, lg: 12, xl: 14 },
                 pb: { xs: 3.7, md: 5.5, lg: 6.5, xl: 8 }
